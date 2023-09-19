@@ -1,4 +1,67 @@
-<label for="assignmentName">Assignment Name</label><br />
-<input id="assignmentName" placeholder="Assignment Name" />
+<label for="assignmentName">Assignment Name</label><br/>
+<br/>
+<input
+    type="text"
+    value="Assignment 1 - HTML"
+    id="assignmentName"
+    placeholder="Assignment Name" />
+
 <h3>Description</h3>
-<textarea cols="50" rows="'5">This is the assignment description</textarea>
+<textarea cols="50" rows="'5">
+This is the assignment description
+</textarea>
+
+<h3>Points</h3>
+<input value="100" type="number" max="100" min="0"/>
+
+<h3>Assignment Group</h3>
+<select>
+    <option>ASSIGNMENTS</option>
+</select>
+
+<h3>Display Grade as</h3>
+<select>
+    <option>Percentage</option>
+</select>
+
+<h3>Online Entry Options</h3>
+<input type="checkbox" id="textEntry"/>
+<label for="textEntry">Text Entry</label><br/>
+<input type="checkbox" id="websiteURL"/>
+<label for="websiteURL">Website URL</label><br/>
+<input type="checkbox" id="mediaRecordings"/>
+<label for="mediaRecordings">Media Recordings</label><br/>
+<input type="checkbox" id="studentAnnotation" />
+<label for="studentAnnotation">Student Annotation</label><br/>
+<label><input type="checkbox"/> File Uploads</label>
+
+<h3>Submission Attempts</h3>
+<select>
+    <option>Unlimited</option>
+</select>
+
+<h3>Plagiarism Revuew</h3>
+<select>
+    <option>None</option>
+</select>
+
+<h3>Group Assignment</h3>
+<input type="checkbox" id="group"/>
+<label for="group">This is a group assignment</label><br />
+
+<h3>Peer Reviews</h3>
+<input type="checkbox" id="peer"/>
+<label for="peer">Require Peer Reviews</label><br />
+
+<h3>Due</h3>
+<input type="date" value="2021-01-01"/>
+
+<h3>Available from</h3>
+<input type="date" value="2021-01-01"/>
+
+<h3>Until</h3>
+<input type="date" value="2021-01-01"/><br />
+<br />
+
+<button>Cancel</button>
+<button>Save</button>
