@@ -1,66 +1,174 @@
-<form id="search-assignments">
-    <input id="assignments" placeholder="Search for Assignments"/>
-<button>Group</button>
-<button>Assignment</button>
-<select>
-    <option>Edit Assignment Dates</option>
- </select>
- <h2>ASSIGNMENTS 40% of Total</h2>
- <select>
-    <option>Edit</option>
-    <option>Speed Grader</option>
-    <option>Duplicate</option>
-    <option>Delete</option>
-    <option>Move To...</option>
-    <option>Send To...</option>
-    <option>Copy To...</option>
-    <option>Share to Commons</option>
- </select>
- <ul>
-    <li>A1</li>
-    <li>A2</li>
-    <li>A3</li>
-    <li>A4</li>
-    <li>A5</li>
-    <li>A6</li>
- </ul>
- <h2>QUIZZES 10% of Total</h2>
- <select>
-    <option>Edit</option>
-    <option>Speed Grader</option>
-    <option>Duplicate</option>
-    <option>Delete</option>
-    <option>Move To...</option>
-    <option>Send To...</option>
-    <option>Copy To...</option>
-    <option>Share to Commons</option>
- </select>
- <ul>
-    <li>Q1</li>
-    <li>Q2</li>
-    <li>Q3</li>
-    <li>Q4</li>
-    <li>Q5</li>
- </ul>
- <h2>EXAMS 20% of Total</h2>
- <select>
-    <option>Edit</option>
-    <option>Speed Grader</option>
-    <option>Duplicate</option>
-    <option>Delete</option>
-    <option>Move To...</option>
-    <option>Send To...</option>
-    <option>Copy To...</option>
-    <option>Share to Commons</option>
- </select>
- <h2>PROJECT 30% of Total</h2>
- <select>
-    <option>Edit</option>
-    <option>Speed Grader</option>
-    <option>Duplicate</option>
-    <option>Delete</option>
-    <option>Move To...</option>
-    <option>Send To...</option>
-    <option>Copy To...</option>
-    <option>Share to Commons</option>
- </select>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles.css" />
+        <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css" />
+        <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" >
+    </head>
+    <body>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Library</li>
+            </ol>
+        </nav>
+        <div class="d-block d-md-none">
+            <a href="/Kanbas/KanbasNavigation">Kanbas Nav</a>
+            <a href="/Kanbas/Courses/CourseNavigation">Course Nav</a>
+            <a href="#">X</a>
+        </div>
+        <div class="wd-flex-row-container">
+            <div class="wd-bg-color-black d-none d-md-block">
+                <ul class="wd-kanbas-navigation">
+                    <li>
+                        <img src="/Kanbas/KanbasNavigation/NUlogo.png" alt="logo">
+                    </li>
+                    <li>
+                        <a href = "/Kanbas/Account/AccountNavigation/index.html">
+                            <i class="fas fa-user-circle" style="color: white; font-size: 3em" ></i>
+                            Account
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "/Kanbas/Dashboard/index.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "/Kanbas/Courses/Home/screen.html">
+                            <i class="fas fa-book"></i>
+                            Courses
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <i class="far fa-calendar-alt"></i>
+                            Calendar
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <i class="fas fa-inbox"></i>
+                            Inbox
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <i class="far fa-clock"></i>
+                            History
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <i class="fas fa-tv"></i>
+                            Studio</a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <i class="fas fa-arrow-right"></i>
+                            Commons
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <i class="far fa-question-circle"></i><br />
+                            Help
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-none d-md-block">
+                <ul class="wd-course-navigation">
+                    <li class="wd-active"><a href = "#">Home</a></li>
+                    <li><a href = "#">Modules</a></li>
+                    <li><a href = "#">Piazza</a></li>
+                    <li><a href = "#">Zoom Meetings</a></li>
+                    <li><a href = "/Kanbas/Courses/Assignments/AssignmentEditor/screen.html">Assignments</a></li>
+                    <li><a href = "#">Quizzes</a></li>
+                    <li><a href = "/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                    <li><a href = "#">People</a></li>
+                    <li><a href = "#">Panopto Video</a></li>
+                    <li><a href = "#">Discussions</a></li>
+                    <li><a href = "#">Announcements</a></li>
+                    <li><a href = "#">Pages</a></li>
+                    <li><a href = "#">Files</a></li>
+                    <li><a href = "#">Rubrics</a></li>
+                    <li><a href = "#">Outcomes</a></li>
+                    <li><a href = "#">Collaborations</a></li>
+                    <li><a href = "#">Syllabus</a></li>
+                    <li><a href = "/Kanbas/Courses/Settings/screen.html">Settings</a></li>
+                </ul>
+            </div>
+            <div class="wd-flex-grow-1">
+               <form id="search-assignments">
+                  <input id="assignments" placeholder="Search for Assignments"/>
+              <button>Group</button>
+              <button>Assignment</button>
+              <select>
+                  <option>Edit Assignment Dates</option>
+               </select>
+               <h2>ASSIGNMENTS 40% of Total</h2>
+               <select>
+                  <option>Edit</option>
+                  <option>Speed Grader</option>
+                  <option>Duplicate</option>
+                  <option>Delete</option>
+                  <option>Move To...</option>
+                  <option>Send To...</option>
+                  <option>Copy To...</option>
+                  <option>Share to Commons</option>
+               </select>
+               <ul>
+                  <li>A1</li>
+                  <li>A2</li>
+                  <li>A3</li>
+                  <li>A4</li>
+                  <li>A5</li>
+                  <li>A6</li>
+               </ul>
+               <h2>QUIZZES 10% of Total</h2>
+               <select>
+                  <option>Edit</option>
+                  <option>Speed Grader</option>
+                  <option>Duplicate</option>
+                  <option>Delete</option>
+                  <option>Move To...</option>
+                  <option>Send To...</option>
+                  <option>Copy To...</option>
+                  <option>Share to Commons</option>
+               </select>
+               <ul>
+                  <li>Q1</li>
+                  <li>Q2</li>
+                  <li>Q3</li>
+                  <li>Q4</li>
+                  <li>Q5</li>
+               </ul>
+               <h2>EXAMS 20% of Total</h2>
+               <select>
+                  <option>Edit</option>
+                  <option>Speed Grader</option>
+                  <option>Duplicate</option>
+                  <option>Delete</option>
+                  <option>Move To...</option>
+                  <option>Send To...</option>
+                  <option>Copy To...</option>
+                  <option>Share to Commons</option>
+               </select>
+               <h2>PROJECT 30% of Total</h2>
+               <select>
+                  <option>Edit</option>
+                  <option>Speed Grader</option>
+                  <option>Duplicate</option>
+                  <option>Delete</option>
+                  <option>Move To...</option>
+                  <option>Send To...</option>
+                  <option>Copy To...</option>
+                  <option>Share to Commons</option>
+               </select>
+            </div>
+        </div>
+    </body>
+</html>

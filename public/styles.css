@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+body * {
+    font-family: "Lato Extended","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.wd-fg-color-white {
+    color:white;
+}
+.wd-fg-color-red {
+    color:red;
+}
+.wd-bg-color-white {
+    background-color: white;
+}
+.wd-bg-color-black {
+    background-color: black;
+}
+.wd-bg-color-red {
+    background-color: red;
+}
+.wd-bg-color-yellow {
+    background-color: yellow;
+}
+.wd-bg-color-green {
+    background-color: green;
+}
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+  
+  
