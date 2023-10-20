@@ -5,6 +5,7 @@ import Modules from "./Modules";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Home from "./Home";
 import Assignments from "./Assignments";
+import AssignmentEditor from "./Assignments/AssignmentEditor";
 
 function Courses() {
   const { courseId } = useParams();
@@ -39,7 +40,7 @@ function Courses() {
             <Route path="Assignments" element={<Assignments/>} />
             <Route
               path="Assignments/:assignmentId"
-              element={<h1>Assignment Editor</h1>}
+              element={<AssignmentEditor/>}
             />
             <Route path="Quizzes" element={<h1>Quizzes</h1>} />
             <Route path="Grades" element={<h1>Grades</h1>} />
