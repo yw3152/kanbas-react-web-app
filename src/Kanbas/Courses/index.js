@@ -1,13 +1,26 @@
 import db from "../../Kanbas/Database";
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
+import Modules from "./Modules";
+import { GiHamburgerMenu } from "react-icons/gi";
+import Home from "./Home";
+import Assignments from "./Assignments";
 
 function Courses() {
   const { courseId } = useParams();
   const course = db.courses.find((course) => course._id === courseId);
+  const { pathname } = useLocation();
+  const lastSegment = pathname.substring(pathname.lastIndexOf('/') + 1);
   return (
     <div>
-      <h1>{course.name}</h1>
+        <div class="navbar">
+        <GiHamburgerMenu />
+        <ul class="breadcrumb">
+            <li>{course.name}</li>
+            <li>&gt;</li>
+            <li>{lastSegment}</li>
+        </ul>
+        </div>
       <CourseNavigation />
       <div>
         <div
@@ -19,14 +32,18 @@ function Courses() {
         >
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
-            <Route path="Home" element={<h1>Home</h1>} />
-            <Route path="Modules" element={<h1>Modules</h1>} />
-            <Route path="Assignments" element={<h1>Assignments</h1>} />
+            <Route path="Home" element={<Home/>} />
+            <Route path="Modules" element={<Modules/>} />
+            <Route path="Piazza" element={<h1>Piazza</h1>} />
+            <Route path="Zoom Meetings" element={<h1>Zoom Meetings</h1>} />
+            <Route path="Assignments" element={<Assignments/>} />
             <Route
               path="Assignments/:assignmentId"
               element={<h1>Assignment Editor</h1>}
             />
+            <Route path="Quizzes" element={<h1>Quizzes</h1>} />
             <Route path="Grades" element={<h1>Grades</h1>} />
+            <Route path="People" element={<h1>People</h1>} />
           </Routes>
         </div>
       </div>

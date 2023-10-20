@@ -12,10 +12,8 @@
     padding-top: 8px;
     padding-bottom: 8px;
 }
-.wd-course-navigation li.wd-active {
+.wd-course-navigation-active {
     border-left: 2px solid black;
-}
-.wd-course-navigation li.wd-active a   {
     color: black;
 }
 .wd-course-navigation a {
