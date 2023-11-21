@@ -153,6 +153,28 @@ function WorkingWithArrays() {
       </a>
       <br />
       <br />
+      <input
+        value={todo.id}
+        onChange={(e) =>
+          setTodo({
+            ...todo,
+            id: e.target.value,
+          })
+        }
+        className="form-control mb-2 w-75"
+        type="number"
+      />
+      <input
+        value={todo.title}
+        onChange={(e) =>
+          setTodo({
+            ...todo,
+            title: e.target.value,
+          })
+        }
+        className="form-control mb-2 w-75"
+        type="text"
+      />
       <textarea
         className="form-control mb-2 w-75"
         onChange={(e) => setTodo({ ...todo, description: e.target.value })}
