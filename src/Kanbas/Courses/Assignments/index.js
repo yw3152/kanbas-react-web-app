@@ -1,33 +1,22 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
-
-
+import AssignmentList from "./AssignmentList";
+import AssignmentEditor from "./AssignmentEditor";
+import { Link } from "react-router-dom";
 function Assignments() {
-  const { courseId } = useParams();
-  const assignments = db.assignments;
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId);
   return (
     <div>
-      <input type="text" class="form-control w-25" id="search" placeholder="Search for Assignment"></input>
-      <div class="float-end d-inline">
-        <button class="btn btn-light">+ Group</button>
-        <button class="btn btn-danger">+ Assignment</button>
-        <button class="btn btn-light">︙</button>
-      </div>
+      <button class="btn btn-light float-end">︙</button>
+      <Link to="/Assignments/AssignmentEditor/index.js">
+      <button class="btn btn-danger float-end">+ Assignment</button>
+      </Link>
+      <button class="btn btn-light float-end">+ Group</button>
+      <input
+        class="form-control w-25"
+        type="text"
+        id="search"
+        placeholder="Search for Assignment"
+      ></input>
       <hr />
-      <h2>Assignments for course {courseId}</h2>
-      <div className="list-group">
-        {courseAssignments.map((assignment) => (
-          <Link
-            key={assignment._id}
-            to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-            className="list-group-item">
-            {assignment.title}
-          </Link>
-        ))}
-      </div>
+      <AssignmentList />
     </div>
   );
 }

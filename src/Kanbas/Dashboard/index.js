@@ -13,24 +13,22 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
       <div>
       <h2>Published Courses ({courses.length})</h2>
       <hr />
-      <div>
-      <input value={course.name} className="form-control"
+      <div className="mb-2">
+      <input value={course.name} className="form-control mb-2"
              onChange={(e) => setCourse({ ...course, name: e.target.value }) } />
-      <input value={course.number} className="form-control"
+      <input value={course.number} className="form-control mb-2"
              onChange={(e) => setCourse({ ...course, number: e.target.value }) } />
-      <input value={course.startDate} className="form-control" type="date"
+      <input value={course.startDate} className="form-control mb-2" type="date"
              onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
-      <input value={course.endDate} className="form-control" type="date"
+      <input value={course.endDate} className="form-control mb-2" type="date"
              onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
-      <br />
       <button class="btn btn-success" onClick={addNewCourse} >
         Add
       </button>
       <button class="btn btn-primary" onClick={updateCourse} >
         Update
       </button>
-      </div><br />
-      <br />
+      </div>
       </div>
       <div class="row row-cols-1 row-cols-md-3 g-4 wd-dashboard-grid">
         <div className="col">
@@ -58,7 +56,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                           <button class="btn btn-danger"
                               onClick={(event) => {
                               event.preventDefault();
-                              deleteCourse(course._id);
+                              deleteCourse(course);
                           }}>
                             Delete
                           </button>
