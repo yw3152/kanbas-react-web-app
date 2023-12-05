@@ -1,6 +1,7 @@
 import Labs from "./Labs";
 import Kanbas from "./Kanbas";
 import HelloWorld from "./Labs/a3/HelloWorld";
+import Project from "./project";
 import {HashRouter, Navigate, Route, Routes} from "react-router-dom";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Navigate to="/Labs" />} />
-          <Route path="/Hello" element={<HelloWorld />} />
+          <Route path="/project/*" element={<Project />} />
           <Route path="/Labs/*" element={<Labs />} />
           <Route path="/Kanbas/*" element={<Kanbas />} />
         </Routes>
