@@ -22,7 +22,7 @@ function Nav() {
         Assignment5
       </Link>
       <Link
-        to="/project"
+        to="/Project"
         className={`nav-link ${pathname.includes("project") ? "active" : ""}`}
       >
         Project
